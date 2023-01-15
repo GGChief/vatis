@@ -653,5 +653,15 @@ namespace Vatsim.Vatis.Client
         {
             Show();
         }
+
+        private void hitTestPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void exButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

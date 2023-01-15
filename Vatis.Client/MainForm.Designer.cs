@@ -39,8 +39,10 @@ namespace Vatsim.Vatis.Client
             this.btnManageProfile = new Vatsim.Vatis.Client.UI.ExButton();
             this.utcClock = new Vatsim.Vatis.Client.UI.HitTestLabel();
             this.btnClose = new Vatsim.Vatis.Client.UI.ExButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabContainer.SuspendLayout();
             this.hitTestPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -71,6 +73,7 @@ namespace Vatsim.Vatis.Client
             // 
             this.hitTestPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.hitTestPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.hitTestPanel1.Controls.Add(this.pictureBox1);
             this.hitTestPanel1.Controls.Add(this.btnMinify);
             this.hitTestPanel1.Controls.Add(this.btnSettings);
             this.hitTestPanel1.Controls.Add(this.btnMinimize);
@@ -83,6 +86,7 @@ namespace Vatsim.Vatis.Client
             this.hitTestPanel1.ShowBorder = false;
             this.hitTestPanel1.Size = new System.Drawing.Size(848, 45);
             this.hitTestPanel1.TabIndex = 2;
+            this.hitTestPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.hitTestPanel1_Paint);
             // 
             // btnMinify
             // 
@@ -198,6 +202,16 @@ namespace Vatsim.Vatis.Client
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(521, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +233,7 @@ namespace Vatsim.Vatis.Client
             this.tabContainer.ResumeLayout(false);
             this.hitTestPanel1.ResumeLayout(false);
             this.hitTestPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,6 +249,7 @@ namespace Vatsim.Vatis.Client
         private UI.ExButton btnManageProfile;
         private UI.ExButton btnSettings;
         private UI.ExButton btnMinify;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

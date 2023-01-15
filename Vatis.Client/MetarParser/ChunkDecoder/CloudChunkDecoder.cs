@@ -16,7 +16,7 @@ namespace MetarDecoder
             return $"^({NoCloudRegexPattern}|({LayerRegexPattern})( {LayerRegexPattern})?( {LayerRegexPattern})?( {LayerRegexPattern})?( {LayerRegexPattern})?( {LayerRegexPattern})?)( )";
         }
 
-        public override Dictionary<string, object> Parse(string remainingMetar, bool withCavok = false)
+        public override Dictionary<string, object> Parse(string remainingMetar, bool withCavok = true)
         {
             var consumed = Consume(remainingMetar);
             var found = consumed.Value;
